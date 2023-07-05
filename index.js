@@ -16,6 +16,7 @@ dotenv.config();
 
 
 app.use(cors({
+    credentials: true,
     origin:["http://localhost:3000","https://blogs-back-3tkn.onrender.com"],
 }));
 app.use(express.json());
