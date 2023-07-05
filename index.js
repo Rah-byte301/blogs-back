@@ -14,7 +14,11 @@ const dotenv = require("dotenv");
 const path = require("path");
 dotenv.config();
 
-app.use(cors());
+const corsConfig = {
+    credentials: true,
+    origin: true,
+};
+app.use(cors(corsConfig));
 app.use(express.json());
 app.use(cookieParser());
 app.use("/uploads", express.static(__dirname + "/uploads"));
